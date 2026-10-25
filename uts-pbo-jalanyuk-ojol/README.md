@@ -1,18 +1,22 @@
-## Getting Started
+## Deskripsi Sistem
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Sistem ini memproses pesanan transportasi penumpang, menangani penugasan pengemudi (driver), dan menghitung tarif akhir secara dinamis berdasarkan jenis kendaraan serta ketersediaan kode promo.
 
-## Folder Structure
+## Struktur dan Relasi Kelas
 
-The workspace contains two folders by default, where:
+- Kelas Induk (`Pesanan`): Menyimpan entitas dasar transaksi `(id, namaPenumpang, jarakKm, driver)` dalam visibilitas private.
+- Pewarisan(Inheritance): Kelas Pesanan diwariskan ke dalam dua subkelas spesifik, yaitu `PesananMotor` dan `PesananMobil`.
+- Asosiasi (`Driver`): Objek Pesanan berelasi dengan kelas Driver yang dimasukkan melalui method `tugaskan(Driver)`.
+- Pesanan tidak menciptakan objek driver sendiri, dan satu driver dapat melayani banyak pesanan.
+- Dependensi (`Promo`): Kelas Pesanan menggunakan kelas Promo murni hanya di dalam method `hitungTotal(Promo promo)` untuk menghitung diskon akhir, tanpa menyimpannya sebagai atribut kelas.  
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Logika Bisnis dan Overriding
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+- Tarif Dasar: Method `hitungTarif()` pada kelas induk menghitung jarak tempuh dikalikan `tarifPerKm` milik driver, lalu dibulatkan ke nilai Rupiah terdekat.
+- PesananMotor: Meng-override `hitungTarif()` untuk menerapkan logika batas tarif minimum yang tidak boleh kurang dari Rp8.000.
+- PesananMobil: Memiliki atribut tambahan kursi dan meng-override `hitungTarif()` untuk menambahkan biaya layanan tetap sebesar Rp3.000 pada tarif dasar.
+- Modifikasi Output: Subkelas meng-override method `info()` turunan induk `(menggunakan super.info())` untuk menambahkan identitas spesifik di akhir teks, seperti "[Motor]" atau "[Mobil,  kursi]".
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Penambahan PesananBajaj
 
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Jika ingin menambahkan `PesananBajaj`, kita hanya perlu membuat class baru yang mewarisi (extends) class induk Pesanan. Tidak perlu menulis ulang rumus perhitungan dasarnya. Cukup lakukan override pada method `hitungTarif()` dan panggil `super.hitungTarif()` untuk mendapatkan tarif awal. Setelah itu, tambahkan blok kondisi (if) untuk menerapkan diskon 10% apabila jarak tempuhnya kurang dari atau sama dengan 3 km.
