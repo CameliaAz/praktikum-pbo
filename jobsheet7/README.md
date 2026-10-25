@@ -1,8 +1,9 @@
 # Laporan Praktikum PBO - Jobsheet 7: Overloading dan Overriding
 
-**Nama:** Camelia Azzahra
-**NIM:** 264107023014  
-**Kelas/Absen:** Teknik INformatika -2G 
+| Nama | Camelia Azzahra |
+|---|---|
+| NIM | 264107023014 |
+| Kelas - Absen |Teknik Informatika - 2G |
 
 ---
 
