@@ -1,8 +1,9 @@
 # Laporan Praktikum PBO - Jobsheet 7: Overloading dan Overriding
 
-**Nama:** Camelia Azzahra
-**NIM:** 264107023014  
-**Kelas/Absen:** Teknik INformatika -2G 
+| Nama | Camelia Azzahra |
+|---|---|
+| NIM | 264107023014 |
+| Kelas - Absen |Teknik Informatika - 2G |
 
 ---
 
@@ -739,10 +740,10 @@ Hasil makan() pada Dosen mencetak teks milik induk ("makan nasi") lalu diikuti t
 | Peran @Override | Menghasilkan *error* jika digunakan | Dianjurkan sebagai validasi *compiler* |
 
 **2. Kapan Memilih Overloading vs Overriding:**
-Pilih Overloading ketika Anda butuh kemudahan memanggil aksi logis yang sama tetapi dengan variasi masukan data yang berbeda. 
+Pilih Overloading ketika butuh kemudahan memanggil aksi logis yang sama tetapi dengan variasi masukan data yang berbeda. 
 Contoh: method sisaSudut() yang bisa menerima 1 sudut atau 2 sudut sekaligus.   
 
-Pilih Overriding ketika Anda ingin memodifikasi atau menspesifikkan perilaku warisan dari induk ke anak. 
+Pilih Overriding ketika ingin memodifikasi atau menspesifikkan perilaku warisan dari induk ke anak. 
 Contoh: Induk Ikan berenang biasa, tapi anak Piranha meng-override method renangnya agar berenang sambil memakan daging.
  
 **3. Alasan Method Tertentu Tidak Dapat Di-override:**
