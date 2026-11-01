@@ -151,8 +151,8 @@ public class MainPercobaan2 {
 | Aktifkan baris `Employee[] e2 = {pEmp, iEmp, eBill};` | **incompatible types:** ElectricityBill cannot be converted to Employee |
 
 ### 2. Screenshot Output & Error
-![Screenshot Output Percobaan 3](img/percobaan3.png)
-![Screenshot Error Eksperimen 3](img/error-percobaan3.png)
+![Screenshot Output Percobaan 3](img/cekpoin-langkah2-percobaan3.png)
+![Screenshot Error Eksperimen 3](img/langkah3-eksperimen-percobaan3.png)
 
 ### 3. Source Code (`id.ac.polinema.polimorfisme.pegawai`)
 
@@ -235,7 +235,7 @@ public class Owner {
 ### Tugas 1 & 2: Permainan Zombie, Barrier, dan Plant
 **Screenshot Output:**
 ![Screenshot Output Tugas 1](img/hasil-tugasmandiri1.png)
-![Screenshot Output Tugas 2](img/tugas2-zombie.png)
+![Screenshot Output Tugas 2](img/hasil-tugasmandiri2.png)
 
 **Destroyable.java**
 ```java
