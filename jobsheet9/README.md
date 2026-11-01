@@ -19,7 +19,7 @@
 ### 2. Screenshot Output & Error
 
 ![Screenshot Output Percobaan 1](img/cekpoin-langkah3-percobaan1.png)
-![Screenshot Error Eksperimen 1](img/error-percobaan1.png)
+![Screenshot Error Eksperimen 1](img/langkah4-eksperimen-percobaan1.png)
 
 ### 3. Tabel Pengamatan Eksperimen Langkah 10
 
@@ -29,10 +29,9 @@
 | `e = eBill;` | **incompatible types:** ElectricityBill cannot be converted to Employee |
 | `Vegetarian v2 = l;` *(pada GambaranDasar)* | **incompatible types:** Lion cannot be converted to Vegetarian |
 
-### 4. Screenshot Output & Error
+### 4. Screenshot Output Langkah 9 Percobaan 1
 
-![Screenshot Output Percobaan 1](img/percobaan1.png)
-![Screenshot Error Eksperimen 2](img/error-percobaan1.png)
+![Screenshot Output MainPercobaan1](img/cekpoin-langkah9-percobaan1.png)
 
 ### 3. Source Code (`id.ac.polinema.polimorfisme.pegawai`)
 
