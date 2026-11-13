@@ -1,0 +1,25 @@
+Pertanyaan Sesi 1
+
+1. Mengapa class induk semua paket dibuat abstract class, bukan class biasa dan bukan
+interface?
+agar bisa mengganti pada objek yang lain seperti cargo, express, dan regular
+Jawab: karena semua jenis paket memiliki data dan perilaku umum yang dapat digunakan bersama. Namun, paket umum tidak perlu dibuat langsung sebagai objek, objek konkretnya adalah `CargoShipment`, `ExpressShipment`, atau `RegularShipment`, yang dapat memiliki aturan biaya masing-masing. Interface cocok untuk mendefinisikan kemampuan, tetapi kurang sesuai untuk menampung keadaan dan implementasi bersama.
+
+2. Mengapa kemampuan dapat dilacak dan dapat diasuransikan dibuat sebagai dua
+interface terpisah, bukan dimasukkan ke class induk atau digabung menjadi satu
+interface?
+Jawab: agar setiap jenis paket hanya menerapkan kemampuan yang memang dimilikinya. Ini mengikuti Interface Segregation Principle = paket yang tidak dapat dilacak atau diasuransikan tidak dipaksa menyediakan perilaku tersebut.
+
+
+Pertanyaan Sesi 2
+1. Seorang rekan membuat FreeShipment extends Shipment untuk paket promo gratis
+dan meng-override calculateFee() dengan throw new
+UnsupportedOperationException() . Apa yang terjadi ketika getTotalFee()
+dipanggil pada loket yang berisi FreeShipment ? Prinsip SOLID apa yang dilanggar, dan
+bagaimana perbaikan singkatnya?
+Jawab: Ketika getTotalFee() dipanggil, program akan melemparkan UnsupportedOperationException sehingga aplikasi mengalami crash,
+karena objek turunan tidak dapat memenuhi kontrak dari class induknya. 
+Hal ini melanggar Liskov Substitution Principle (LSP) dalam prinsip SOLID karena subclass mengubah perilaku dasar 
+yang diharapkan dari parent nya. 
+Perbaikannya adalah dengan membuat calculateFee() pada FreeShipment mengembalikan nilai 0 alih-alih melempar exception, 
+sehingga tetap konsisten dengan kontrak Shipment.
